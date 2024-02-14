@@ -48,14 +48,14 @@ def bot():
     issue = repo.get_issue(number=payload['pull_request']['number'])
 
     # Call meme-api to get a random meme
-    response = requests.get(url='https://meme-api.herokuapp.com/gimme')
-    if response.status_code != 200:
-        return 'ok'
+    #response = requests.get(url='https://meme-api.herokuapp.com/gimme')
+    #if response.status_code != 200:
+    #    return 'ok'
 
     # Get the best resolution meme
-    meme_url = response.json()['preview'][-1]
+    #meme_url = response.json()['preview'][-1]
     # Create a comment with the random meme
-    issue.create_comment(f"![Alt Text]({meme_url})")
+    issue.create_comment(f"!Alt Text")
     return "ok"
 
 
